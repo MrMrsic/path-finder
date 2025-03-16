@@ -1,0 +1,10 @@
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    /*background-color: #C6E7FF;*/ /* A2D0D7, 9FB2C8, bde0fe  */
+}
