@@ -1,0 +1,31 @@
+@font-face {
+    font-family: PoweredTitle;
+    src: url(../assets/fonts/Comicoon-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: TextFontBold;
+    font-weight: 900;
+    src: url(../assets/fonts/FunnelSans-ExtraBold.ttf);
+  }
+
+  @font-face {
+    font-family: TextFontRegular;
+    font-weight: 400;
+    src: url(../assets/fonts/FunnelSans-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: TextFontLight;
+    font-weight: 200;
+    /* src: url(../assets/fonts/FunnelSans-Light.ttf); */
+    /* src: url(../assets/fonts/Poppins-Thin.ttf); */
+    src: url(../assets/fonts/Poppins-Light.ttf);
+  }
+
+:root {
+    --main-title-font: TextFontBold;
+    --sub-title-font: TextFontLight;
+    --text-font: TextFontRegular;
+    --text-line-height: 1.4;
+}

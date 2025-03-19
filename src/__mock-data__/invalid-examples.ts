@@ -1,7 +1,7 @@
 import { MockDataList } from "../types/mock-data";
 
 const invalidMockData: MockDataList = {
-  example_1: {
+  invalid_example_1: {
     title: "Missing start character",
     description: "",
     characters: [
@@ -12,7 +12,7 @@ const invalidMockData: MockDataList = {
       [" ", " ", " ", " ", " ", " ", "+", "-", "-", "-", "+"],
     ],
   },
-  example_2: {
+  invalid_example_2: {
     title: "Missing end character",
     description: "",
     characters: [
@@ -23,7 +23,7 @@ const invalidMockData: MockDataList = {
       [" ", " ", " ", " ", " ", " ", "+", "-", "-", "-", "+"],
     ],
   },
-  example_3_1: {
+  invalid_example_3_1: {
     title: "Multiple starts 1",
     description: "",
     characters: [
@@ -34,7 +34,7 @@ const invalidMockData: MockDataList = {
       [" ", " ", " ", " ", " ", " ", "+", "-", "-", "-", "+"],
     ],
   },
-  example_3_2: {
+  invalid_example_3_2: {
     title: "Multiple starts 2",
     description: "",
     characters: [
@@ -45,7 +45,7 @@ const invalidMockData: MockDataList = {
       [" ", " ", " ", " ", " ", " ", "@", "-", "B", "-", "+"],
     ],
   },
-  example_3_3: {
+  invalid_example_3_3: {
     title: "Multiple starts 3",
     description: "",
     characters: [
@@ -56,7 +56,7 @@ const invalidMockData: MockDataList = {
       [" ", " ", " ", " ", " ", " ", "@"],
     ],
   },
-  example_4: {
+  invalid_example_4: {
     title: "Fork in path",
     description: "",
     characters: [
@@ -69,7 +69,7 @@ const invalidMockData: MockDataList = {
       [" ", " ", " ", " ", " ", " ", "+", "-", "-", "-", "+"],
     ],
   },
-  example_5: {
+  invalid_example_5: {
     title: "Broken path",
     description: "",
     characters: [
@@ -79,12 +79,12 @@ const invalidMockData: MockDataList = {
       [" ", " ", " ", " ", " ", " ", " ", " ", "B", "-", "x"],
     ],
   },
-  example_6: {
+  invalid_example_6: {
     title: "Multiple starting paths",
     description: "",
     characters: [[" ", " ", "x", "-", "B", "-", "@", "-", "A", "-", "x"]],
   },
-  example_7: {
+  invalid_example_7: {
     title: "Fake turn",
     description: "",
     characters: [[" ", " ", "@", "-", "A", "-", "+", "-", "B", "-", "x"]],

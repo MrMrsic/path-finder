@@ -1,10 +1,15 @@
 .app {
+    width: 100%;
+    height: 100%;
+}
+
+.example_view, .home_view {
     padding: 8px 48px;
     font-family: 'Courier New', Courier, monospace;
     /*color: #6E468B;*/
 }
 
-.mainTitle {
+.main_title {
     /*color: #7F8AC9;*/ /* 6E468B, 7F8AC9, EDB7AD */
     font-size: 48px;
 }

@@ -1,10 +1,10 @@
 import { Link } from "react-router";
-import styles from "../AppStyles.module.css";
+import styles from "../styles/app-styles.module.css";
 
 export const Home = () => {
   return (
-    <>
-      <h1 className={styles.mainTitle}>Sauna Code Challenge</h1>
+    <div className={styles.home_view}>
+      <h1 className={styles.main_title}>Sauna Code Challenge</h1>
       <div>Follow a path of characters & collect letters: </div>
       <section>
         <ul>
@@ -57,6 +57,16 @@ export const Home = () => {
           </li>
         </ul>
       </section>
-    </>
+      <section>
+        <h2>Frontend Extension</h2>
+        <div>
+          In addition to requested functionality, you can find implementation of "Path Finder" playground on following
+          link
+        </div>
+        <div style={{ marginTop: "16px" }}>
+          <Link to="/playground">Playground</Link>
+        </div>
+      </section>
+    </div>
   );
 };

@@ -1,3 +1,8 @@
+* {    
+    margin: 0;
+    padding: 0;
+}
+
 html, body, #root {
     margin: 0;
     padding: 0;
@@ -7,4 +12,13 @@ html, body, #root {
 
 body {
     /*background-color: #C6E7FF;*/ /* A2D0D7, 9FB2C8, bde0fe  */
+}
+
+ul {
+    padding-left: 24px;
+    margin: 16px 0;
+}
+
+h1, h2 {
+    margin: 11px 0 11px 0;
 }
