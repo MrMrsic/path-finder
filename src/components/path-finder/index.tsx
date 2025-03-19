@@ -89,11 +89,16 @@ const PathFinder = (props: PathFinderData) => {
                           //maxLength={1}
                           value={data.characters[rowIndex][colIndex] ? data.characters[rowIndex][colIndex] : ""}
                           onChange={(e) => {
-                            if (validateInput(e?.target?.value) && editCoordinate) {
-                              editCoordinate(rowIndex, colIndex, e?.target?.value);
+                            const val = e?.target?.value.replace(/\s+/g, ""); // remove white space from string
+                            if (val && validateInput(val) && editCoordinate) {
+                              editCoordinate(rowIndex, colIndex, val);
                               setShowTooltip("");
                             } else {
-                              setShowTooltip(`${rowIndex}${colIndex}`);
+                              if (val === "" && editCoordinate) {
+                                editCoordinate(rowIndex, colIndex, val);
+                              } else {
+                                setShowTooltip(`${rowIndex}${colIndex}`);
+                              }
                             }
                           }}
                           onBlur={() => setShowTooltip("")}
