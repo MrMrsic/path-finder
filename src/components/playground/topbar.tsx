@@ -14,7 +14,7 @@ const Topbar = (props: TopbarProps) => {
   const { validOptions, invalidOptions, selectedTemplate, selectDisabled, selectTemplate } = props;
   return (
     <section className={styles.topbar}>
-      <h1 className={styles.sauna_main_title}>
+      <h1 className={styles.sauna_main_title} data-testid="topbar-title">
         <span>Sauna</span>
         <span>Code</span>
         <span>Challenge</span>
@@ -22,6 +22,7 @@ const Topbar = (props: TopbarProps) => {
       <div className={styles.select_holder}>
         <div className={styles.select_label}>Select predefined array of characters or create your own from scratch</div>
         <Select
+          data-testid="select-template-dropdown"
           className={styles.select}
           value={selectedTemplate}
           onSelect={(value: string) => selectTemplate(value)}

@@ -3,7 +3,7 @@ import styles from "./playground.module.css";
 
 const InfoPanel = () => {
   return (
-    <div className={styles.info_panel}>
+    <div className={styles.info_panel} aria-label="help-information">
       <div className={styles.info_panel__title}>Info</div>
       <div className={styles.info_panel__rules}>
         <ul>

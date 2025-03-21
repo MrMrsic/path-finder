@@ -56,6 +56,7 @@ const PathFinder = (props: PathFinderData) => {
       <div className={styles.title}>{isBeingEdited ? "Custom array" : data.title}</div>
       <div className={styles.table_wrapper}>
         <div
+          data-testid="array-table"
           className={cx(styles.table, {
             with_simulation_mask: isSimulating,
           })}
@@ -83,6 +84,7 @@ const PathFinder = (props: PathFinderData) => {
                           })}
                           key={`row-${rowIndex}-col-${colIndex}-input`}
                           type="text"
+                          aria-label={`row-${rowIndex}-col-${colIndex}-input`}
                           name={`row-${rowIndex}-col-${colIndex}-input`}
                           disabled={isSimulating}
                           autoComplete={"off"}
@@ -119,7 +121,9 @@ const PathFinder = (props: PathFinderData) => {
               <div className={styles.table_info__label}>Results </div>
               <ul>
                 <li>Letters: {letters}</li>
-                <li>Path: {path}</li>
+                <li>
+                  Path: <span data-testid="results-path">{path}</span>
+                </li>
               </ul>
             </div>
             <div
@@ -128,7 +132,7 @@ const PathFinder = (props: PathFinderData) => {
               })}
             >
               <div className={styles.table_info__label}>Errors </div>
-              <ul>
+              <ul aria-label="errors-list">
                 {pathFinderResults.errors.map((err: string) => (
                   <li key={`error-${data.title}-${err}`}>{err}</li>
                 ))}
@@ -143,7 +147,9 @@ const PathFinder = (props: PathFinderData) => {
                   <div className={styles.table_info__label}>Expected Results </div>
                   <ul>
                     <li>Letters: {data.expected_result.letters}</li>
-                    <li>Path: {data.expected_result.path}</li>
+                    <li>
+                      Path: <span data-testid="expected-path">{data.expected_result.path}</span>
+                    </li>
                   </ul>
                 </div>
                 <div className={styles.table_info__row}>
@@ -163,7 +169,7 @@ const PathFinder = (props: PathFinderData) => {
                   })}
                 >
                   <div className={styles.table_info__label}>Errors </div>
-                  <ul>
+                  <ul aria-label="errors-list">
                     {pathFinderResults.errors.map((err: string) => (
                       <li key={`error-${data.title}-${err}`}>{err}</li>
                     ))}

@@ -249,6 +249,7 @@ export const Playground = () => {
               </div>
             ) : (
               <Button
+                data-testid="run-simulation"
                 size="large"
                 onClick={() => runSimulation()}
                 icon={<CaretRightFilled />}
